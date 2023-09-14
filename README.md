@@ -1,5 +1,9 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+If you had more time, what additional improvements would you have considered?
+
+The implementation take more that I expected, so if I have more time the first tyme I focus it would be on get al the information of the Api request, cheking  acces persmision, on the develop show me a 403 error for the torre genome, so probable ask for help with this, then once I'd have all the information fiunish the requeriments, mainly at the begining I focus that the service and integration works ask expected then move forward and  focus on the desing part in oprder to provided a very good shape website using tailiwing in order to improve faster the view of the website 
+
 ## Getting Started
 
 First, run the development server:
