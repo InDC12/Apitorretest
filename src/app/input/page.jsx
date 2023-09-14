@@ -1,7 +1,6 @@
 'use client'
 import styles from '../page.module.css'
 import {useState} from 'react'
-import ListOfUsers from '../request/page'
 import getServerSideProps from '../../api/serverApirenderingPost'
 import getServerSidePropsGet from '@/api/serverApiRenderingGet'
 
