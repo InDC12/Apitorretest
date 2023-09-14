@@ -5,7 +5,7 @@
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
-  background-color: rgb(244, 243, 243);
+  background-color: rgb(49, 54, 101);
 }
 
 .description {
@@ -52,6 +52,7 @@
   border-radius: var(--border-radius);
   background: rgba(var(--card-rgb), 0);
   border: 1px solid rgba(var(--card-border-rgb), 0);
+  background-color: white;
   transition: background 200ms, border 200ms;
 }
 

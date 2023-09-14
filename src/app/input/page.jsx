@@ -2,7 +2,8 @@
 import styles from '../page.module.css'
 import {useState} from 'react'
 import ListOfUsers from '../request/page'
-import getServerSideProps from '../../components/serverApirendering'
+import getServerSideProps from '../../api/serverApirenderingPost'
+import getServerSidePropsGet from '@/api/serverApiRenderingGet'
 
 export default function NameInput() {
     
@@ -17,6 +18,7 @@ export default function NameInput() {
     }
     const [name, setName] = useState(torreQuery)
     const [array, setArray] = useState([])
+    const [userName, setUserName] = useState('')
 
     const handleChange = async (e) => {
         e.preventDefault();
@@ -30,13 +32,21 @@ export default function NameInput() {
         const dataUser = await getServerSideProps(name)
         setArray(dataUser)
     }
+
+     const handleUserChange =  async (e) => {
+         setUserName(e.target.name)
+         await getServerSidePropsGet(userName)
+    }
+    
+
+
     
   return (
     <main className={styles.main} >
       <input className={styles.center} type='search' onChange={handleChange}></input>
 {      array.slice(0,10).map( array => (
-            <article key={array.ardaId}>
-                <button name={array.username}>{array.name}</button>
+            <article className={styles.card} key={array.ardaId}>
+                <button name={array.username} onClick={handleUserChange}>{array.name}</button>
             </article>
         ))}
     </main>
